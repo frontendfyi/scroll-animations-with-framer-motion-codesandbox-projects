@@ -217,7 +217,7 @@ export const SamePage = () => {
           </motion.p>
           <motion.p
             className="fixed top-1/2 left-[20px] w-[300px] translate-y-[calc(-50%_+_var(--y))] pl-16 text-xl leading-tight text-white"
-            style={{ opacity: endTextOpacity, "--y": endTexty }}
+            style={{ opacity: endTextOpacity, "--y": endTexty } as any}
           >
             <span className="text-primary">Built for flow</span>
             <br />
