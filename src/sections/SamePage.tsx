@@ -12,7 +12,7 @@ const animationOrder = {
   showParagraphTwoStart: 0.35,
   showParagraphTwoEnd: 0.4,
   hideParagraphTwo: 0.5,
-  showLoadingScreenStart: 0.5,
+  showLoadingScreenStart: 0.53,
   showLoadingScreenEnd: 0.58,
   createBranchStart: 0.65,
   createBranchEnd: 0.7,
