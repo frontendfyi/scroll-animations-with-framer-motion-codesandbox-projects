@@ -143,80 +143,55 @@ export const SamePage = () => {
     ["4rem", "0rem"]
   );
 
+  const position = useTransform(scrollYProgress, (pos) =>
+    pos >= 1 ? "relative" : "fixed"
+  );
+
   return (
     <section ref={containerRef}>
-      <div className="grid h-[800vh]">
-        <div>
-          <div className="sticky top-1/2 flex origin-center -translate-y-1/2 justify-center">
+      <div className="relative h-[800vh]">
+        <div className="sticky top-1/2 flex origin-center -translate-y-1/2 justify-center">
+          <motion.div
+            className="absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw] translate-x-[calc(-50%_+_var(--x))] -translate-y-1/2 scale-[var(--scale)] "
+            style={{ opacity, "--x": x, "--scale": scale } as any}
+          >
+            <MainScreen className="h-[75vh] max-h-[48vw] w-auto" />
+            <motion.span
+              className="mt-3 block text-2xl text-white"
+              style={{ opacity: newBranchOpacity }}
+            >
+              <BranchIcon className="mr-3 inline-block h-12 w-12" /> Feature
+              branch
+            </motion.span>
+          </motion.div>
+          <motion.div
+            className="absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw] -translate-y-1/2  translate-x-[calc(-50%_+_var(--x))] scale-[var(--scale)]"
+            style={
+              {
+                opacity: loadingScreenOpacity,
+                "--x": loadingScreenX,
+                "--scale": loadingScreenscale,
+              } as any
+            }
+          >
+            <LoadingScreen className="h-[75vh] max-h-[48vw] w-auto" />
             <motion.div
-              className="absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw] translate-x-[calc(-50%_+_var(--x))] -translate-y-1/2 scale-[var(--scale)] "
-              style={{ opacity, "--x": x, "--scale": scale } as any}
+              style={{ opacity: newBranchOpacity }}
+              className="absolute inset-0"
             >
               <MainScreen className="h-[75vh] max-h-[48vw] w-auto" />
-              <motion.span
-                className="mt-3 block text-2xl text-white"
-                style={{ opacity: newBranchOpacity }}
-              >
-                <BranchIcon className="mr-3 inline-block h-12 w-12" /> Feature
-                branch
-              </motion.span>
             </motion.div>
-            <motion.div
-              className="absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw] -translate-y-1/2  translate-x-[calc(-50%_+_var(--x))] scale-[var(--scale)]"
-              style={
-                {
-                  opacity: loadingScreenOpacity,
-                  "--x": loadingScreenX,
-                  "--scale": loadingScreenscale,
-                } as any
-              }
+            <motion.span
+              className="mt-3 block text-2xl text-white"
+              style={{ opacity: newBranchOpacity }}
             >
-              <LoadingScreen className="h-[75vh] max-h-[48vw] w-auto" />
-              <motion.div
-                style={{ opacity: newBranchOpacity }}
-                className="absolute inset-0"
-              >
-                <MainScreen className="h-[75vh] max-h-[48vw] w-auto" />
-              </motion.div>
-              <motion.span
-                className="mt-3 block text-2xl text-white"
-                style={{ opacity: newBranchOpacity }}
-              >
-                <BranchIcon className="mr-3 inline-block h-12 w-12" /> Frontend
-                FYI's branch
-              </motion.span>
-            </motion.div>
-          </div>
+              <BranchIcon className="mr-3 inline-block h-12 w-12" /> Frontend
+              FYI's branch
+            </motion.span>
+          </motion.div>
+
           <motion.p
-            style={
-              {
-                opacity: paragraph1Opacity,
-                "--y": paragraph1TranslateY,
-              } as any
-            }
-            className="fixed top-1/2 left-[20px] w-[300px] translate-y-[calc(-50%_+_var(--y))] pl-16 text-2xl leading-tight text-white"
-          >
-            Not only share code,
-            <br />
-            <span className="text-primary">share the context.</span>
-          </motion.p>
-          <motion.p
-            style={
-              {
-                opacity: paragraph2Opacity,
-                "--y": paragraph2TranslateY,
-              } as any
-            }
-            className="fixed top-1/2 right-[20px] w-[300px] translate-y-[calc(-50%_+_var(--y))] pr-16 text-xl leading-tight text-white"
-          >
-            Sometimes it's not about code.
-            <br />
-            <span className="text-primary">
-              Get everybody on the same page. Literally.
-            </span>
-          </motion.p>
-          <motion.p
-            className="fixed top-1/2 left-[20px] w-[300px] translate-y-[calc(-50%_+_var(--y))] pl-16 text-xl leading-tight text-white"
+            className="absolute top-1/2 left-[calc(50%-60rem)] w-[50rem] translate-y-[calc(-50%_+_var(--y))] pl-16 text-2xl leading-tight text-white"
             style={{ opacity: endTextOpacity, "--y": endTexty } as any}
           >
             <span className="text-primary">Built for flow</span>
@@ -224,6 +199,36 @@ export const SamePage = () => {
             Spin up a new branch for any sized project in seconds.
           </motion.p>
         </div>
+        <motion.p
+          style={
+            {
+              opacity: paragraph1Opacity,
+              "--y": paragraph1TranslateY,
+              position,
+            } as any
+          }
+          className="top-1/2 left-[20px] w-[300px] translate-y-[calc(-50%_+_var(--y))] pl-16 text-2xl leading-tight text-white"
+        >
+          Not only share code,
+          <br />
+          <span className="text-primary">share the context.</span>
+        </motion.p>
+        <motion.p
+          style={
+            {
+              opacity: paragraph2Opacity,
+              "--y": paragraph2TranslateY,
+              position,
+            } as any
+          }
+          className="top-1/2 right-[20px] w-[300px] translate-y-[calc(-50%_+_var(--y))] pr-16 text-xl leading-tight text-white"
+        >
+          Sometimes it's not about code.
+          <br />
+          <span className="text-primary">
+            Get everybody on the same page. Literally.
+          </span>
+        </motion.p>
       </div>
     </section>
   );

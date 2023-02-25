@@ -27,7 +27,6 @@ export const Collaboration = () => {
       <div ref={containerRef} className="h-[140vh] w-full">
         <div className="sticky top-[10vh]">
           <div className="flex justify-center">
-            {/* <MainScreen className="h-[75vh] max-h-[45vw] w-auto opacity-0" /> */}
             <motion.div
               style={{ scale, x: xPercentage, opacity }}
               className="origin-[50%_0%]"

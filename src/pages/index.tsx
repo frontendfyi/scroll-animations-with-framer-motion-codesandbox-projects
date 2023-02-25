@@ -1,6 +1,7 @@
 import { Collaboration } from "@/sections/Collaboration";
 import { Hero } from "@/sections/Hero";
 import { SamePage } from "@/sections/SamePage";
+import { StreamlinedExperience } from "@/sections/StreamlinedExperience";
 import Head from "next/head";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <div className="relative z-10 w-full overflow-x-clip">
           <Collaboration />
           <SamePage />
+          <StreamlinedExperience />
         </div>
       </main>
     </>
