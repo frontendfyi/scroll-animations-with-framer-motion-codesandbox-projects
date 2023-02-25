@@ -6,7 +6,6 @@ export const Hero = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    // container: containerRef,
     offset: ["end end", "end start"],
   });
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
