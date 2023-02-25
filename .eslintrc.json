@@ -1,6 +1,9 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    // Alt text is super important to add, this is for demo purposes only <3
+    "jsx-a11y/alt-text": "off",
+    "@next/next/no-img-element": "off"
   }
 }

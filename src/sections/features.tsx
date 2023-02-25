@@ -1,6 +1,3 @@
-import { CommandPaletteScreen } from "@/screens/command-palette";
-import { DevtoolsScreen } from "@/screens/devtools";
-import MainScreen from "@/screens/main-screen";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -60,13 +57,19 @@ export const Features = () => {
       <div className="sticky top-[16.7vh] h-[66.8vh] px-16 text-2xl leading-[1] text-white [&_p]:w-[45rem] [&_p]:max-w-[90%]">
         <motion.div style={{ x, scale }} className="relative h-full">
           <motion.figure style={{ opacity }} className="h-full">
-            <MainScreen className="h-full w-auto" />
+            <img src="/main-screen.svg" className="h-full w-auto" />
           </motion.figure>
           <motion.figure style={{ opacity: text2Opacity }}>
-            <CommandPaletteScreen className="absolute inset-0 h-full w-auto" />
+            <img
+              src="/command-palette.svg"
+              className="absolute inset-0 h-full w-auto"
+            />
           </motion.figure>
           <motion.figure style={{ opacity: text3Opacity }}>
-            <DevtoolsScreen className="absolute inset-0 h-full w-auto" />
+            <img
+              src="/devtools.svg"
+              className="absolute inset-0 h-full w-auto"
+            />
           </motion.figure>
         </motion.div>
         <motion.p

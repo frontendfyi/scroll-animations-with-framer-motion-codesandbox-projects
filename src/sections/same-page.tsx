@@ -1,6 +1,4 @@
 import { BranchIcon } from "@/icons/branch";
-import LoadingScreen from "@/screens/loading-screen";
-import MainScreen from "@/screens/main-screen";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -155,7 +153,10 @@ export const SamePage = () => {
             className="absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw] translate-x-[calc(-50%_+_var(--x))] -translate-y-1/2 scale-[var(--scale)] "
             style={{ opacity, "--x": x, "--scale": scale } as any}
           >
-            <MainScreen className="h-[75vh] max-h-[48vw] w-auto" />
+            <img
+              src="/main-screen.svg"
+              className="h-[75vh] max-h-[48vw] w-auto"
+            />
             <motion.span
               className="mt-3 block text-2xl text-white"
               style={{ opacity: newBranchOpacity }}
@@ -174,12 +175,18 @@ export const SamePage = () => {
               } as any
             }
           >
-            <LoadingScreen className="h-[75vh] max-h-[48vw] w-auto" />
+            <img
+              src="/loading-screen.svg"
+              className="h-[75vh] max-h-[48vw] w-auto"
+            />
             <motion.div
               style={{ opacity: newBranchOpacity }}
               className="absolute inset-0"
             >
-              <MainScreen className="h-[75vh] max-h-[48vw] w-auto" />
+              <img
+                src="/main-screen.svg"
+                className="h-[75vh] max-h-[48vw] w-auto"
+              />
             </motion.div>
             <motion.span
               className="mt-3 block text-2xl text-white"

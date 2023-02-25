@@ -1,4 +1,3 @@
-import MainScreen from "@/screens/main-screen";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -31,7 +30,10 @@ export const Collaboration = () => {
               style={{ scale, x: xPercentage, opacity }}
               className="origin-[50%_0%]"
             >
-              <MainScreen className="h-[75vh] max-h-[45vw] w-auto" />
+              <img
+                src="/main-screen.svg"
+                className="h-[75vh] max-h-[45vw] w-auto"
+              />
             </motion.div>
           </div>
         </div>
