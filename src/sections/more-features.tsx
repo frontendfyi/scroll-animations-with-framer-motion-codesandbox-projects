@@ -52,6 +52,7 @@ export const MoreFeatures = () => {
 
   return (
     <motion.section
+      ref={containerRef}
       style={{ opacity, y }}
       className="mx-auto grid w-full max-w-[120rem] grid-cols-3 gap-40 py-96"
     >
