@@ -1,3 +1,4 @@
+import { stylesWithCssVar } from "@/utils/motion";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -73,8 +74,11 @@ export const Features = () => {
           </motion.figure>
         </motion.div>
         <motion.p
-          style={{ opacity: text1Opacity, "--y": text1Y } as any}
-          className="absolute top-1/2 left-0 translate-y-[calc(-50%_+_var(--y))]"
+          style={stylesWithCssVar({
+            opacity: text1Opacity,
+            "--y": text1Y,
+          })}
+          className="translate-y-centered-offset absolute top-1/2 left-0"
         >
           <span className="text-primary">Preconfigured environments</span>
           <br />
@@ -82,16 +86,22 @@ export const Features = () => {
           configuration files.
         </motion.p>
         <motion.p
-          style={{ opacity: text2Opacity, "--y": text2Y } as any}
-          className="absolute top-1/2 left-0 translate-y-[calc(-50%_+_var(--y))]"
+          style={stylesWithCssVar({
+            opacity: text2Opacity,
+            "--y": text2Y,
+          })}
+          className="translate-y-centered-offset absolute top-1/2 left-0"
         >
           <span className="text-primary">Command Pallete</span>
           <br />
           Access and complete any action in seconds with the command palette.
         </motion.p>
         <motion.p
-          style={{ opacity: text3Opacity, "--y": text3Y } as any}
-          className="absolute top-1/2 left-0 translate-y-[calc(-50%_+_var(--y))]"
+          style={stylesWithCssVar({
+            opacity: text3Opacity,
+            "--y": text3Y,
+          })}
+          className="translate-y-centered-offset absolute top-1/2 left-0"
         >
           <span className="text-primary">Devtools</span>
           <br />

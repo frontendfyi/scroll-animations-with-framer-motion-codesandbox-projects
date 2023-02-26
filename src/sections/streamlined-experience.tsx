@@ -1,3 +1,4 @@
+import { stylesWithCssVar } from "@/utils/motion";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -26,27 +27,25 @@ export const StreamlinedExperience = () => {
 
   return (
     <motion.section
-      style={
-        {
-          opacity: opacitySection,
-          "--scale": scale,
-          "--opacity-border": opacityBorder,
-        } as any
-      }
+      style={stylesWithCssVar({
+        opacity: opacitySection,
+        "--scale": scale,
+        "--opacity-border": opacityBorder,
+      })}
       ref={containerRef}
       className="mt-[50vh] flex h-[500vh] items-start justify-start"
     >
       <div className="sticky top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#CEF144] before:opacity-[var(--opacity-border)]">
         <motion.p
           aria-hidden
-          style={{ x: textX, y: "-50%" } as any}
+          style={{ x: textX, y: "-50%" }}
           className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[23rem] text-heading"
         >
           Streamlined Experience.
         </motion.p>
         <motion.p
           aria-hidden
-          style={{ x: textX, y: "-50%" } as any}
+          style={{ x: textX, y: "-50%" }}
           className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] z-[11] text-[23rem] text-transparent [-webkit-text-stroke:1px_var(--color-heading)]"
         >
           Streamlined Experience.
