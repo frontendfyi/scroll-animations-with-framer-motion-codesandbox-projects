@@ -8,27 +8,24 @@ export const Collaboration = () => {
     offset: ["start end", "end end"],
   });
 
-  const scale = useTransform(
-    scrollYProgress,
-    [0.3, 0.45, 0.6, 0.7, 0.95],
-    [1, 1.15, 1.5, 2.5, 2.5]
-  );
+  const scale = useTransform(scrollYProgress, [0.1, 0.4, 0.95], [1, 2.5, 2.5]);
   const x = useTransform(
     scrollYProgress,
-    [0.3, 0.45, 0.58, 0.7, 0.75, 0.95],
-    [0, -10, -25, -30, -45, -60]
+    [0.1, 0.25, 0.7, 1],
+    [0, -55, -60, -80]
   );
+
   const xPercentage = useTransform(x, (x) => `${x}%`);
   const opacity = useTransform(scrollYProgress, [0.9, 1], [1, 0]);
 
   return (
     <section className="mt-[-30vh]">
-      <div ref={containerRef} className="h-[140vh] w-full">
+      <div ref={containerRef} className="h-[300vh] w-full">
         <div className="sticky top-[10vh]">
           <div className="flex justify-center">
             <motion.div
               style={{ scale, x: xPercentage, opacity }}
-              className="origin-[50%_0%]"
+              className="origin-top"
             >
               <img
                 src="/main-screen.svg"
