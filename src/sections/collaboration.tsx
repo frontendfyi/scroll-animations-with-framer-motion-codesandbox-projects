@@ -2,9 +2,9 @@ import { useTransform, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
 export const Collaboration = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["start end", "end end"],
   });
 
@@ -18,7 +18,7 @@ export const Collaboration = () => {
 
   return (
     <section className="mt-[-30vh]">
-      <div ref={containerRef} className="h-[300vh] w-full">
+      <div ref={targetRef} className="h-[300vh] w-full">
         <div className="sticky top-[10vh]">
           <div className="flex justify-center">
             <motion.div style={{ scale, x, opacity }} className="origin-top">

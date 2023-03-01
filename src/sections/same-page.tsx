@@ -22,9 +22,9 @@ const animationOrder = {
 };
 
 export const SamePage = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["start end", "end end"],
   });
 
@@ -147,7 +147,7 @@ export const SamePage = () => {
   );
 
   return (
-    <section ref={containerRef}>
+    <section ref={targetRef}>
       <div className="relative h-[800vh]">
         <div className="sticky top-1/2 flex origin-center -translate-y-1/2 justify-center">
           <motion.div

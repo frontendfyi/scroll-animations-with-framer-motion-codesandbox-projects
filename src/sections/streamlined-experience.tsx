@@ -3,9 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export const StreamlinedExperience = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["start end", "end end"],
   });
   const textX = useTransform(scrollYProgress, [0.1, 0.7], ["100%", "-100%"]);
@@ -32,7 +32,7 @@ export const StreamlinedExperience = () => {
         "--scale": scale,
         "--opacity-border": opacityBorder,
       })}
-      ref={containerRef}
+      ref={targetRef}
       className="mt-[50vh] flex h-[500vh] items-start justify-start"
     >
       <div className="sticky top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#CEF144] before:opacity-[var(--opacity-border)]">

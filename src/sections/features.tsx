@@ -3,9 +3,9 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
 export const Features = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["start end", "end end"],
   });
 
@@ -52,7 +52,7 @@ export const Features = () => {
 
   return (
     <section
-      ref={containerRef}
+      ref={targetRef}
       className="flex h-[500vh] flex-col items-center justify-start"
     >
       <div className="sticky top-[16.7vh] h-[66.8vh] px-16 text-2xl leading-[1] text-white [&_p]:w-[45rem] [&_p]:max-w-[90%]">

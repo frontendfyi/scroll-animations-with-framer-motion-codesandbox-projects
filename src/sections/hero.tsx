@@ -3,9 +3,9 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
 export const Hero = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["end end", "end start"],
   });
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -17,7 +17,7 @@ export const Hero = () => {
   return (
     <motion.section
       style={{ opacity }}
-      ref={containerRef}
+      ref={targetRef}
       className="relative mb-[8rem] h-screen py-16 text-white before:pointer-events-none before:fixed before:inset-0 before:z-0 before:bg-[radial-gradient(circle_farthest-side_at_calc(300px)_calc(300px),_var(--color-secondary)_0%,_transparent_100%)] before:opacity-40"
     >
       <motion.div

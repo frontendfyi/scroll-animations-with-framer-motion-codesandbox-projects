@@ -41,9 +41,9 @@ const content = [
 ];
 
 export const MoreFeatures = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: targetRef,
     offset: ["start end", "end start"],
   });
 
@@ -52,7 +52,7 @@ export const MoreFeatures = () => {
 
   return (
     <motion.section
-      ref={containerRef}
+      ref={targetRef}
       style={{ opacity, y }}
       className="mx-auto grid w-full max-w-[120rem] grid-cols-3 gap-40 py-96"
     >
