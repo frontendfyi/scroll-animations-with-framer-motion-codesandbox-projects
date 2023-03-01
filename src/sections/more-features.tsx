@@ -47,8 +47,8 @@ export const MoreFeatures = () => {
     offset: ["start end", "end start"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0.9, 1], [1, 0]);
-  const y = useTransform(scrollYProgress, [0.9, 1], [0, 500]);
+  const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
+  const y = useTransform(scrollYProgress, [0.8, 1], ["0vh", "50vh"]);
 
   return (
     <motion.section
