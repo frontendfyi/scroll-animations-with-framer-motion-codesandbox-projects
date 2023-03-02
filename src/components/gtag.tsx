@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { pageview } from "@/utils/gtag";
 
-const gaTrackingId = "G-D0K1FGG74W'";
+const gaTrackingId = "G-D0K1FGG74W";
 
 export const Gtag = () => {
   const router = useRouter();
