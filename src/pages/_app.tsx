@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter, Cousine } from "@next/font/google";
+import { Gtag } from "@/components/gtag";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,10 +17,13 @@ const cousine = Cousine({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div
-      className={`bg-background ${inter.variable} ${cousine.variable} text-text font-body`}
-    >
-      <Component {...pageProps} />
-    </div>
+    <>
+      <Gtag />
+      <div
+        className={`bg-background ${inter.variable} ${cousine.variable} font-body text-text`}
+      >
+        <Component {...pageProps} />
+      </div>
+    </>
   );
 }
