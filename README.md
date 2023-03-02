@@ -10,7 +10,7 @@
 
 [Visit the preview of what we build here.](https://scroll-animations-with-framer-motion.vercel.app/)
 
-[Link to the video (soon)](https://youtube.com/@frontendfyi)
+[Link to the video](https://youtu.be/fmgh4QbpK_w)
 
 ## Running this project
 
