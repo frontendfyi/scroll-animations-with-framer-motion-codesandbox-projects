@@ -1,7 +1,7 @@
 # Creating scroll animations with Framer Motion
 ## By rebuilding part of CodeSandbox Project's page
 
-**NOTE:** I am NOT affiliated with [CodeSandbox](https://projects.codesandbox.io/), but do think their website is an amazing showcase of Framer Motion's capabilities and a great example for other people to learn from.
+**NOTE:** I am NOT affiliated with [CodeSandbox](https://projects.codesandbox.io/), but do think their website is an amazing showcase of Framer Motion's capabilities and a great example for other people to learn from. All of the svg's in `/public` are owned by CodeSandbox as well as all of the icons in `/src/icons`, they are only used as teaching material here.
 
 ## Links
 

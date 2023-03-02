@@ -1,3 +1,5 @@
+// Icon copied from CodeSandbox's website, they maintain all rights
+// for this icon. We only use it for educational purposes.
 export const GithubIcon = (props: React.HTMLAttributes<SVGElement>) => (
   <svg
     viewBox="0 0 24 24"

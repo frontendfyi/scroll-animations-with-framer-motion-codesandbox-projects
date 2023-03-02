@@ -1,3 +1,5 @@
+// Icon copied from CodeSandbox's website, they maintain all rights
+// for this icon. We only use it for educational purposes.
 export const Intellisense = (props: React.HTMLAttributes<SVGElement>) => (
   <svg
     {...props}
