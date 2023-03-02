@@ -13,8 +13,10 @@ declare global {
  * https://developers.google.com/analytics/devguides/collection/gtagjs/pages
  */
 export const pageview = (url: string, trackingId: string) => {
-  if (!window?.gtag && process.env.NODE_ENV === "development") {
-    console.warn("window.gtag is not defined.");
+  if (!window?.gtag) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn("window.gtag is not defined.");
+    }
     return;
   }
   window.gtag("config", trackingId, {
