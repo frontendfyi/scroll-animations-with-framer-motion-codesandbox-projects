@@ -20,3 +20,7 @@ Run `yarn` or `npm i` to install the project. Next run `yarn dev` or `npm run de
 
 - The homepage is located in `src/pages/index.tsx`
 - All animated sections can be found in `src/sections`
+
+## Design remains copyrighted by CodeSandbox, it can only be used for educational purposes.
+
+See the [LICENSE](/LICENSE.md) for more information about reusing this code.
