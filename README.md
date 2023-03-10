@@ -10,6 +10,7 @@
 
 - [🔗 Visit the preview of what we build here.](https://scroll-animations-with-framer-motion.vercel.app/)
 - [📺 Link to the video](https://youtu.be/fmgh4QbpK_w)
+- [📺 Link to the gradients video](https://youtu.be/u1s3uHQibAs)
 - [🥡 CodeSandbox' version](https://projects.codesandbox.io/)
 
 ## Running this project
@@ -20,6 +21,7 @@ Run `yarn` or `npm i` to install the project. Next run `yarn dev` or `npm run de
 
 - The homepage is located in `src/pages/index.tsx`
 - All animated sections can be found in `src/sections`
+- Page with gradients can be found in `/src/pages/gradientssss` or in your browser at `/gradientssss`.
 
 ## Design remains copyrighted by CodeSandbox, it can only be used for educational purposes.
 
