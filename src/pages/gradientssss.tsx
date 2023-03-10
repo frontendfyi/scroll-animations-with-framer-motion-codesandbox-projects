@@ -37,7 +37,7 @@ export default function Page() {
         .title {
           font-size: 80px;
           text-transform: uppercase;
-          transform: rotate(10deg) translateX(calc(var(--x) / 10));
+          transform: rotate(10deg) translateX(calc(var(--x) / 10, 0px));
         }
       `}</style>
       <div ref={heroRef} className="hero">
