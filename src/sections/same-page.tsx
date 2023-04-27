@@ -146,21 +146,27 @@ export const SamePage = () => {
     pos >= 1 ? "relative" : "fixed"
   );
 
+  const avatarOpacity = useTransform(scrollYProgress, (pos) =>
+    pos >= animationOrder.fadeInEnd ? 1 : 0
+  );
+
   return (
     <section ref={targetRef}>
       <div className="relative h-[800vh]">
         <div className="sticky top-1/2 flex origin-center -translate-y-1/2 justify-center">
           <motion.div
-            className="translate-x-centered-offset absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw] -translate-y-1/2 scale-[var(--scale)] "
+            className="translate-x-centered-offset absolute left-1/2 top-1/2 flex w-[50vw] -translate-y-1/2 scale-[var(--scale)] flex-col items-center justify-center "
             style={stylesWithCssVar({
               opacity,
               "--x": x,
               "--scale": scale,
             })}
           >
-            <img
-              src="/main-screen.svg"
-              className="h-[75vh] max-h-[48vw] w-auto"
+            <img src="/main-screen.svg" className="h-auto w-full" />
+            <motion.img
+              style={{ opacity: avatarOpacity }}
+              className="absolute left-[13%] top-1/2 h-[1.5vw] w-[1.5vw] translate-y-1/2 rounded-full border border-[#c82] object-cover will-change-transform"
+              src="https://unsplash.com/photos/sibVwORYqs0/download?force=true&w=128&h=128"
             />
             <motion.span
               className="mt-3 block text-2xl text-white"
@@ -171,25 +177,19 @@ export const SamePage = () => {
             </motion.span>
           </motion.div>
           <motion.div
-            className="translate-x-centered-offset absolute left-1/2 top-1/2 h-[75vh] max-h-[48vw]  -translate-y-1/2 scale-[var(--scale)]"
+            className="translate-x-centered-offset absolute left-1/2 top-1/2 flex w-[50vw] -translate-y-1/2 scale-[var(--scale)] flex-col items-center justify-center"
             style={stylesWithCssVar({
               opacity: loadingScreenOpacity,
               "--x": loadingScreenX,
               "--scale": loadingScreenscale,
             })}
           >
-            <img
-              src="/loading-screen.svg"
-              className="h-[75vh] max-h-[48vw] w-auto"
-            />
+            <img src="/loading-screen.svg" className="h-auto w-full" />
             <motion.div
               style={{ opacity: newBranchOpacity }}
               className="absolute inset-0"
             >
-              <img
-                src="/main-screen.svg"
-                className="h-[75vh] max-h-[48vw] w-auto"
-              />
+              <img src="/main-screen.svg" className="h-auto w-full" />
             </motion.div>
             <motion.span
               className="mt-3 block text-2xl text-white"
