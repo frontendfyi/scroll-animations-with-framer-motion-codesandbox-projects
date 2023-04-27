@@ -11,6 +11,7 @@
 - [🔗 Visit the preview of what we build here.](https://scroll-animations-with-framer-motion.vercel.app/)
 - [📺 Link to the video](https://youtu.be/fmgh4QbpK_w)
 - [📺 Link to the gradients video](https://youtu.be/u1s3uHQibAs)
+- [📺 Link to the avatar animation video](https://youtu.be/a52V2l4c1jE)
 - [🥡 CodeSandbox' version](https://projects.codesandbox.io/)
 
 ## Running this project
