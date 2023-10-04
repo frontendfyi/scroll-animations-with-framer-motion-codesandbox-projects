@@ -9,16 +9,11 @@
     --color-heading: #f5f5f7;
     --color-text: rgba(255, 255, 255, 0.6);
     --color-background: #090909;
-
     font-size: 62.5%;
   }
 }
 
-
 @layer utilities {
-  /* This two helpers apply a -50% to the translate x/y, and add
-   * a --y/--x css variable to it. This util is only here to make writing this class
-   * a bit easier to read in the HTML :)   */
   .translate-y-centered-offset {
     @apply translate-y-[calc(-50%_+_var(--y))];
   }

@@ -19,12 +19,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <Hero />
         <div className="relative z-10 w-full overflow-x-clip">
-          <Collaboration />
-          <SamePage />
           <StreamlinedExperience />
-          <Features />
           <MoreFeatures />
           <NoLockin />
         </div>
